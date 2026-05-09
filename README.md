@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Dnuts - Ecommerce Store with Admin Panel & WhatsApp Orders 🍩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**GitHub:** https://sandhiyalingam2703.github.io/Dnuts/
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Project Overview
+Dnuts is a responsive ecommerce web application built with React.js. It simulates a real-world online donut store with customer ordering, admin management, and WhatsApp-based order processing. Built as a frontend-only project to demonstrate React concepts, state management, and third-party integrations without backend cost.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Key Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### **Customer Features**
+- **Product Catalog:** Browse donuts with image, name, price, and ratings fetched from LocalStorage
+- **Shopping Cart:** Add/Remove items, update quantity, real-time total calculation
+- **Cart Persistence:** Cart data saved to LocalStorage - items remain even after page refresh/close
+- **Responsive UI:** Mobile-first design built with Material-UI (MUI v5) components
+- **Order Flow:** Clean checkout page with order summary before placing order
 
-### `npm test`
+### **Business Feature: WhatsApp Order Integration 📱**
+- **Zero-Cost Order Management:** On "Place Order", user is auto-redirected to WhatsApp with pre-filled order details
+- **Auto-Generated Message:** Sends product list, quantity, price, total amount to owner's WhatsApp number
+- **Tech Used:** `window.open('https://wa.me/91XXXXXXXXXX?text=...')` with `encodeURIComponent` for formatting
+- **User Experience:** After redirect, confirmation screen shows "Order Placed! Owner will call you shortly"
+- **Why This Matters:** Solves real problem for small businesses - no backend/payment gateway needed
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Admin Features**
+- **Hidden Admin Panel:** Route `/admin` - not visible in main UI, accessible only to developer/owner
+- **Real-Time CRUD:** Update product price, image URL, name, description from admin dashboard
+- **Instant Sync:** Changes in Admin Panel reflect immediately on customer side via LocalStorage
+- **No Database Needed:** Uses LocalStorage as pseudo-DB for demo purposes
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Category | Technologies |
+| --- | --- |
+| **Frontend** | React.js, JavaScript ES6, HTML5, CSS3 |
+| **UI Library** | Material-UI (MUI v5) - AppBar, Card, Grid, Button, Dialog, TextField, Snackbar |
+| **State Management** | React Context API + useReducer + useState + useEffect |
+| **Data Persistence** | Browser LocalStorage with JSON.stringify/parse |
+| **Routing** | React Router v6 |
+| **Integration** | WhatsApp Click-to-Chat API |
+| **Deployment** | Vercel |
+| **Version Control** | Git + GitHub |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
